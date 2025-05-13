@@ -8,7 +8,7 @@
   <title>Blog Page</title>
   <style>
     body {
-      background-color: #eaeaea;
+      background-color: #6f6565;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
     }
@@ -66,15 +66,153 @@
     }
     .blog-button {
       background-color: #14e9f0;
-      color: rgb(255, 0, 0);
-      padding: 12px 25px;
-      font-size: 16px;
+
+  
+
+    .top-right-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+
+    .top-left-button:hover {
+      background-color: #0056b3;
+    }
+    .top-left-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px; 
+    }
+
+    .top-right-button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .top-right-button:hover {
+      background-color: #0056b3;
     }
   </style>
+  <head>
+    <meta charset="UTF-8">
+    <title>Button Action</title>
+    <style>
+      .top-right-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+  
+      .top-right-button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+  
+      .top-right-button:hover {
+        background-color: #0056b3;
+      }
+  
+      #message {
+        display: none; 
+        margin-top: 100px;
+        font-size: 20px;
+        color: darkgreen;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <div class="top-right-container">
+      <button class="top-right-button" onclick="showMessage()">Tıkla</button>
+      <button class="top-right-button">İkinci Buton</button>
+    </div>
+  
+    <div id="message">🎉 Merhaba, bu butona tıkladın!</div>
+  
+    <script>
+      function showMessage() {
+        document.getElementById("message").style.display = "block";
+      }
+    </script>
+  <head>
+    <meta charset="UTF-8">
+    <title>Button Action</title>
+    <style>
+      .top-right-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+  
+      .top-right-button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+  
+      .top-right-button:hover {
+        background-color: #0056b3;
+      }
+  
+      #message {
+        display: none;
+        margin-top: 100px;
+        font-size: 20px;
+        color: darkgreen;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <div class="top-right-container">
+      <button class="top-right-button" onclick="showMessage('Merhaba, bu butona tıkladın!')">Tıkla</button>
+      <button class="top-right-button" onclick="showMessage('Blog sayfama hoş geldin!')">İkinci Buton</button>
+    </div>
+  
+    <div id="message"></div>
+  
+    <script>
+      function showMessage(text) {
+        const messageDiv = document.getElementById("message");
+        messageDiv.innerText = text;
+        messageDiv.style.display = "block";
+      }
+    </script>
+  
+  </body>
+  </body>
 
 </head>
 <body>
@@ -87,20 +225,101 @@
 
 
       
-      <div class="main-content" style="margin: 0; padding: 0;margin-top: 30px;">
+      <div class="main-content" style="margin: 55; padding: 0;margin-top: 30px;">
         <div class="blog-post">
-          <h2 style="margin: 0;">Welcome to My Blog</h2>
-          <p style="margin: 0;">blog yazilcak.</p>
+          <h2 style="margin: 55;">Welcome to My Blog</h2>
+          <p style="margin: 55px;">blog yazilcak.</p>
         </div>
         
       <div style="justify-content: right; justify-items: center;">
-        <button class="blog-button button-container" style="text-align: center; padding: 20px;">Blog</button> 
+        <button class="top-right-button">Click Me</button>
+    <button class="top-right-button">Button 2</button>
    
              </div>
       
-        <div class="blog-post">
-          <h2 style="margin: 0;">kod</h2>
-          <p style="margin: 0;">Building a blog layout with just HTML and CSS is a great way to understand how web pages are structured.</p>
+        <div class="blog-post" style="margin: 55px; padding: 5px;">
+          <h2 style="margin: 5px;">kod</h2>
+          <p style="margin: 5px;">  <h1>Kendine Yatırım Yapmanın Gerçek Gücü</h1>
+
+            <p>Hayatta herkes bir şeylerin peşinden koşuyor: daha iyi bir iş, daha fazla para, daha sağlıklı bir beden ya da daha huzurlu bir zihin. Ama çoğu zaman en temel noktayı atlıyoruz: <strong>kendimize yatırım yapmayı</strong>.</p>
+            <h2>Kendine Yatırım Ne Demek?</h2>
+            <p>Kendine yatırım, sadece para harcamak anlamına gelmez. Bu; zamanını, enerjini ve dikkati kendini geliştirmeye harcamaktır. Yeni bir şey öğrenmek, sağlıklı alışkanlıklar kazanmak, zihinsel dayanıklılığını artırmak, hatta sadece daha fazla kitap okumak bile bunun bir parçasıdır.</p>
+        
+            <h2>Neden Önemli?</h2>
+            <p>Çünkü hayat, dışarıdaki koşullardan çok senin içindeki kaynaklara bağlıdır. İş değişebilir, insanlar gelip geçebilir ama <strong>senin birikimin ve yeteneklerin hep seninledir</strong>. Kendine yatırım yaparsan, ne olursa olsun tekrar ayağa kalkarsın.</p>
+        
+            <h2>Nereden Başlamalı?</h2>
+            <ul >
+                <li><strong> Günde 15 dakika oku.</strong> Konu fark etmez, önemli olan zihni canlı tutmak.</li>
+                <li><strong> Hedeflerini yaz.</strong> Ne istediğini bilmeden ilerleyemezsin.</li>
+                <li><strong> Kötü alışkanlıkları fark et ve değiştir.</strong> Küçük adımlar bile büyük dönüşümler getirir.</li>
+                <li><strong> Kendinle vakit geçir.</strong> Sessizlik bazen en iyi öğretmendir.</li>
+            </ul>
+        
+            <h2>Son Söz</h2>
+            <p> Unutma, bugün attığın küçük adımlar, yarın seni bambaşka bir insana dönüştürebilir. Kendine yatırım yapmaktan asla vazgeçme. Çünkü bu dünyadaki en önemli proje sensin.</p>
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Erteleme alışkanlığını yenmenin yolları hakkında kişisel gelişim blog yazısı.">
+    <title>Erteleme Alışkanlığını Nasıl Yenersin?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fefefe;
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-style: italic;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Erteleme Alışkanlığını Nasıl Yenersin?</h1>
+
+    <p>Hepimizin başına gelmiştir: Yapılması gereken işler vardır ama bir türlü başlayamayız. “Sonra yaparım” deriz, ama o “sonra” bir türlü gelmez. Bu, erteleme alışkanlığıdır ve fark edilmeden hayatımızı sabote eder.</p>
+
+    <h2>Neden Erteliyoruz?</h2>
+    <ul>
+        <li><strong>Mükemmeliyetçilik:</strong> “En iyi şekilde yapmalıyım” baskısı başlatmayı zorlaştırır.</li>
+        <li><strong>Korku:</strong> Başarısız olma ya da eleştirilme korkusu.</li>
+        <li><strong>Motivasyon eksikliği:</strong> Görev ilgimizi çekmiyorsa geciktiririz.</li>
+        <li><strong>Kararsızlık:</strong> Nereden başlayacağımızı bilemeyiz.</li>
+    </ul>
+
+    <h2>Ertelemeyi Yenmenin Yolları</h2>
+    <ul>
+        <li><strong>5 Dakika Kuralı:</strong> Başlamak zor geliyorsa “Sadece 5 dakika yapacağım” de. Genelde başladıktan sonra devamı gelir.</li>
+        <li><strong>Görevleri Parçala:</strong> Büyük işler göz korkutur. Küçük adımlara böl, daha yapılabilir görünür.</li>
+        <li><strong>Zamanlayıcı Kullan:</strong> Pomodoro tekniğiyle 25 dakika çalış, 5 dakika mola ver.</li>
+        <li><strong>Çevreni Düzenle:</strong> Dikkat dağıtan her şeyi ortadan kaldır. Temiz bir masa, berrak bir zihin yaratır.</li>
+        <li><strong>Kendine Söz Ver:</strong> Günün sonunda yapmadıklarını değil, yaptıklarını hatırlamak için çaba göster.</li>
+    </ul>
+
+    <h2>Unutma</h2>
+    <p>Başlamak, başarmanın yarısıdır. Erteleme alışkanlığı, üzerine gidildikçe gücünü kaybeder. Kendine inan ve küçük adımlarla ilerle. Bugün başla, çünkü “yarın” bazen hiç gelmez.</p>
+
+    <div class="footer">
+        Bu yazı Mehdi Tavakoli tarafından hazırlanmıştır.
+    </div>
+
         </div>
       </div>
       
