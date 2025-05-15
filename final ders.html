@@ -60,7 +60,7 @@
     .blog-footer {
       text-align: center;
       background-color: #333;
-      color: white;
+      color: rgb(139, 103, 103);
       padding: 20px;
       margin-top: 50px;
     }
@@ -143,7 +143,7 @@
         text-align: center;
       }
 
-    
+</style>
     </style>
   </head>
   <body>
@@ -197,6 +197,18 @@
     </style>
   </head>
   <body>
+    <button onclick="toggleTheme()" class="top-right-button">🌙 Tema Değiştir</button>
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("dark-theme");
+  }
+</script>
+<style>
+  .dark-theme {
+    background-color: #121212;
+    color: white;
+  }
+</style>
   
     <div class="top-right-container">
       <button class="top-right-button" onclick="showMessage('Merhaba')">Tıkla</button>
@@ -293,7 +305,31 @@
     </style>
 </head>
 <body>
+<h3>Yorum Yap</h3>
+<textarea id="commentBox" rows="4" cols="50" placeholder="Yorumunuzu yazın..."></textarea>
+<br>
+<button onclick="submitComment()" class="top-right-button">Gönder</button>
+<div id="commentList"></div>
+<button onclick="likePost(this)">👍 Beğen (<span>0</span>)</button>
 
+<script>
+  function likePost(button) {
+    const span = button.querySelector("span");
+    span.innerText = parseInt(span.innerText) + 1;
+  }
+</script>
+
+<script>
+  function submitComment() {
+    const text = document.getElementById("commentBox").value;
+    if (text.trim()) {
+      const newComment = document.createElement("p");
+      newComment.innerText = "🗨️ " + text;
+      document.getElementById("commentList").appendChild(newComment);
+      document.getElementById("commentBox").value = "";
+    }
+  }
+</script>
     <h1>Erteleme Alışkanlığını Nasıl Yenersin?</h1>
 
     <p>Hepimizin başına gelmiştir: Yapılması gereken işler vardır ama bir türlü başlayamayız. “Sonra yaparım” deriz, ama o “sonra” bir türlü gelmez. Bu, erteleme alışkanlığıdır ve fark edilmeden hayatımızı sabote eder.</p>
@@ -342,7 +378,48 @@
 
         </div>
       </div>
-      
-  
+      <div id="clock" style="text-align:center; margin-top: 10px; font-size: 18px;"></div>
+<script>
+  setInterval(() => {
+    const now = new Date();
+    document.getElementById("clock").innerText = now.toLocaleString();
+  }, 1000);
+</script>
+  <div>
+  <button onclick="filterPosts('all')">Hepsi</button>
+  <button onclick="filterPosts('gelisim')">Kişisel Gelişim</button>
+  <button onclick="filterPosts('verimlilik')">Verimlilik</button>
+</div>
+
+
+<div class="blog-post" data-category="gelisim">
+  <h2>Kendini Geliştirmenin 5 Yolu</h2>
+  <p>Kişisel gelişim, hayat kalitenizi artırmak için atacağınız adımlarla ilgilidir. Kitap okumak, yeni beceriler öğrenmek, hedefler koymak bu yollardan bazılarıdır.</p>
+</div>
+
+
+<div class="blog-post" data-category="verimlilik">
+  <h2>Verimli Çalışmak İçin 3 Teknik</h2>
+  <p>Pomodoro tekniği, Eisenhower matrisi ve tek işe odaklanma yöntemiyle gün içindeki verimliliğinizi artırabilirsiniz.</p>
+</div>
+
+
+<div class="blog-post" data-category="gelisim">
+  <h2>Sabah Rutinleri ile Güne Güçlü Başla</h2>
+  <p>Sabahları erken kalkmak, meditasyon yapmak ve egzersizle başlamak zihinsel ve fiziksel enerjinizi artırır.</p>
+</div>
+
+<script>
+  function filterPosts(category) {
+    const posts = document.querySelectorAll('.blog-post');
+    posts.forEach(post => {
+      if (category === 'all' || post.dataset.category === category) {
+        post.style.display = 'block';
+      } else {
+        post.style.display = 'none';
+      }
+    });
+  }
+</script>
 </body>
 </html>
