@@ -1,257 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <title>blog</title>
-  <meta charset="UTF-8">
-  <link rel="icon" href="favicon.ico" type="image/png">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog Page</title>
-  <style>
-    body {
-      background-color: #6f6565;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-    }
-
-    .blog-header {
-  background-color: #0960bc;
-  color: rgb(0, 0, 0);
-  padding: 30px 20px;
-  text-align: center;
-  margin: 0;
-  width: 100%;
-  display: block;
-}
-
-.main-content {
-  width: 100%;
-  margin: 0;
-  background: #dad6d6;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-    .blog-post {
-      border-bottom: 1px solid #ddd;
-      padding: 20px 0;
-    }
-
-    .blog-post:last-child {
-      border-bottom: none;
-    }
-
-    .blog-post h2 {
-      margin: 0 0 10px;
-      color: #333;
-    }
-
-    .blog-post small {
-      color: #888;
-    }
-
-    .blog-post p {
-      margin-top: 10px;
-      line-height: 1.6;
-    }
-    .button-container {
-      text-align: center;
-      margin-top: 50px;
-    }
-    .blog-footer {
-      text-align: center;
-      background-color: #333;
-      color: rgb(139, 103, 103);
-      padding: 20px;
-      margin-top: 50px;
-    }
-    .blog-button {
-      background-color: #14e9f0;
-
-  
-
-    .top-right-button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      background-color: #242e38;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .top-left-button:hover {
-      background-color: hsl(213, 13%, 17%);
-    }
-    .top-left-container {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px; 
-    }
-
-    .top-right-button {
-      padding: 10px 20px;
-      background-color: #323c46;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .top-right-button:hover {
-      background-color: #26313c;
-    }
-  </style>
-  <head>
-    <meta charset="UTF-8">
-    <title>Button Action</title>
-    <style>
-      .top-right-container {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-  
-      .top-right-button {
-        padding: 10px 20px;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-      }
-  
-      .top-right-button:hover {
-        background-color: #0056b3;
-      }
-  
-      #message {
-        display: none; 
-        margin-top: 100px;
-        font-size: 20px;
-        color: darkgreen;
-        text-align: center;
-      }
-
-</style>
-    </style>
-  </head>
-  <body>
-  
-    <div class="top-right-container">
-      <button class="top-right-button" onclick="showMessage()">Tıkla 1</button>
-      <button class="top-right-button">tikla 2</button>
-    </div>
-  
-    <div id="message">🎉 Merhaba </div>
-  
-    <script>
-      function showMessage() {
-        document.getElementById("message").style.display = "block";
-      }
-    </script>
-  <head>
-    <meta charset="UTF-8">
-    <title>Button Action</title>
-    <style>
-      .top-right-container {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-  
-      .top-right-button {
-        padding: 10px 20px;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-      }
-  
-      .top-right-button:hover {
-        background-color: #0056b3;
-      }
-  ss
-      #message {
-        display: none;
-        margin-top: 100px;
-        font-size: 20px;
-        color: rgb(4, 61, 4);
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <button onclick="toggleTheme()" class="top-right-button">🌙 Tema Değiştir</button>
-<script>
-  function toggleTheme() {
-    document.body.classList.toggle("dark-theme");
-  }
-</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kişisel Gelişim Blogu</title>
 <style>
-  .dark-theme {
-    background-color: #121212;
-    color: white;
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    margin: 20px;
+    line-height: 1.6;
   }
+  header, footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #007acc;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  article {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    max-width: 700px;
+    margin: auto;
+  }
+  h1, h2 {
+    font-weight: 700;
+  }
+  button {
+    cursor: pointer;
+    margin: 5px 10px 15px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007acc;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #005fa3;
+  }
+  .like-btn {
+    background-color: #28a745;
+  }
+  .like-btn:hover {
+    background-color: #1e7e34;
+  }
+  .comment-section {
+    margin-top: 20px;
+  }
+  textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  .comments-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .comments-list li {
+    background: #e9f5ff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+  }
+  .theme-toggle {
+    margin: 20px auto;
+    display: block;
+    background-color: #6c757d;
+  }
+  .dark-theme {
+    background: #121212;
+    color: #ddd;
+  }
+  .dark-theme article {
+    background: #1e1e1e;
+    box-shadow: 0 2px 8px rgb(255 255 255 / 0.1);
+  }
+  .dark-theme button {
+    background-color: #444;
+    color: #ddd;
+  }
+  .dark-theme button:hover {
+    background-color: #666;
+  }
+  
 </style>
-  
-    <div class="top-right-container">
-      <button class="top-right-button" onclick="showMessage('Merhaba')">Tıkla</button>
-      <button class="top-right-button" onclick="showMessage('Blog sayfama hoş geldin')">İkinci Buton</button>
-    </div>
-  
-    <div id="message"></div>
-  
-    <script>
-      function showMessage(text) {
-        const messageDiv = document.getElementById("message");
-        messageDiv.innerText = text;
-        messageDiv.style.display = "block";
-      }
-    </script>
-  
-  </body>
-  </body>
-
 </head>
 <body>
 
-    <div class="blog-header" style="text-align: center; top: 0; padding: 20px;">
-        <h1> Blog</h1>
-        <p>html ile yazilmis bir blog sayfasi</p>
-       
-      </div>
+<header>
+  <h1>Kişisel Gelişim Blogu</h1>
+</header>
 
+<article>
+  <h2>Sabah Rutinleri ile Güne Güçlü Başla</h2>
+  <p>Her sabah belirli alışkanlıkları tekrarlamak, odaklanmanı ve üretkenliğini artırabilir. Örneğin; soğuk duş, 10 dakika meditasyon ve yürüyüşle başlayan bir sabah ruh halini değiştirebilir.</p>
+  <p>Bu rutinleri alışkanlık haline getirmek, gün içerisindeki enerji seviyeni yükseltir ve stresini azaltır.</p>
 
-      
-      <div class="main-content" style="margin: 55; padding: 0;margin-top: 30px;">
-        <div class="blog-post">
-          <h2 style="margin: 55;">Welcome to My Blog</h2>
-          <p style="margin: 55px;">Mehdi Tavakoli'nin Blog sayfasina Hoş Geldiniz</p>
-        </div>
-        
-      <div style="justify-content: right; justify-items: center;">
-        <button class="top-right-button">1</button>
-    <button class="top-right-button">2</button>
-   
-             </div>
-      
-        <div class="blog-post" style="margin: 55px; padding: 10px;">
+  <button id="like-btn" class="like-btn" aria-pressed="false" aria-label="Beğen">👍 Beğen (<span id="like-count">0</span>)</button>
+  <button id="share-btn" aria-label="Paylaş">🔗 Paylaş</button>
+  <button id="bookmark-btn" aria-label="Kaydet">🔖 Kaydet</button>
+</article>
+
+<section class="comment-section">
+  <h3>Yorumlar</h3>
+  <textarea id="comment-input" placeholder="Yorumunuzu yazın..."></textarea><br />
+  <button id="submit-comment-btn">Yorumu Gönder</button>
+
+  <ul id="comments-list" class="comments-list"></ul>
+</section>
+
+<button id="theme-toggle" class="theme-toggle">🌓 Tema Değiştir</button>
+
+<footer>
+  &copy; 2025 Kişisel Gelişim Blogu
+</footer>
+
+<script>
+  // Beğeni sayacı
+  const likeBtn = document.getElementById('like-btn');
+  const likeCountSpan = document.getElementById('like-count');
+  let likeCount = 0;
+
+  likeBtn.addEventListener('click', () => {
+    likeCount++;
+    likeCountSpan.textContent = likeCount;
+    likeBtn.setAttribute('aria-pressed', likeCount > 0);
+  });
+
+  // Paylaş butonu - basit alert
+  const shareBtn = document.getElementById('share-btn');
+  shareBtn.addEventListener('click', () => {
+    alert('Sayfanın linki kopyalandı! (Simülasyon)');
+  });
+
+  // Kaydet butonu - basit toggle
+  const bookmarkBtn = document.getElementById('bookmark-btn');
+  let bookmarked = false;
+  bookmarkBtn.addEventListener('click', () => {
+    bookmarked = !bookmarked;
+    bookmarkBtn.textContent = bookmarked ? '✅ Kaydedildi' : '🔖 Kaydet';
+  });
+
+  // Yorum sistemi
+  const commentInput = document.getElementById('comment-input');
+  const submitCommentBtn = document.getElementById('submit-comment-btn');
+  const commentsList = document.getElementById('comments-list');
+
+  submitCommentBtn.addEventListener('click', () => {
+    const commentText = commentInput.value.trim();
+    if (commentText.length === 0) {
+      alert('Lütfen yorumunuzu yazın.');
+      return;
+    }
+    const li = document.createElement('li');
+    li.textContent = commentText;
+    commentsList.appendChild(li);
+    commentInput.value = '';
+  });
+
+  // Tema değiştirme
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+  });
+</script>
+   <div class="blog-post" style="margin: 55px; padding: 10px;">
           <h1 style="margin: 5px;">Kendine nasıl yatırım yapabilirsin?</h1>
           <p style="margin: 5px;">  <h1>Kendine Yatırım Yapmanın Gerçek Gücü</h1>
 
@@ -277,72 +201,10 @@
     <meta name="description" content="Erteleme alışkanlığını yenmenin yolları hakkında kişisel gelişim blog yazısı.">
     <title>Erteleme Alışkanlığını Nasıl Yenersin?</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fefefe;
-            color: #333;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-        }
-        ul {
-            margin-bottom: 20px;
-        }
-        .footer {
-            margin-top: 40px;
-            font-style: italic;
-            color: #777;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-<h3>Yorum Yap</h3>
-<textarea id="commentBox" rows="4" cols="50" placeholder="Yorumunuzu yazın..."></textarea>
-<br>
-<button onclick="submitComment()" class="top-right-button">Gönder</button>
-<div id="commentList"></div>
-<button onclick="likePost(this)">👍 Beğen (<span>0</span>)</button>
 
-<script>
-  function likePost(button) {
-    const span = button.querySelector("span");
-    span.innerText = parseInt(span.innerText) + 1;
-  }
-</script>
 
-<script>
-  function submitComment() {
-    const text = document.getElementById("commentBox").value;
-    if (text.trim()) {
-      const newComment = document.createElement("p");
-      newComment.innerText = "🗨️ " + text;
-      document.getElementById("commentList").appendChild(newComment);
-      document.getElementById("commentBox").value = "";
-    }
-  }
-</script>
-    <h1>Erteleme Alışkanlığını Nasıl Yenersin?</h1>
 
-    <p>Hepimizin başına gelmiştir: Yapılması gereken işler vardır ama bir türlü başlayamayız. “Sonra yaparım” deriz, ama o “sonra” bir türlü gelmez. Bu, erteleme alışkanlığıdır ve fark edilmeden hayatımızı sabote eder.</p>
-
-    <h2>Neden Erteliyoruz?</h2>
-    <ul>
-        <li><strong>Mükemmeliyetçilik:</strong> “En iyi şekilde yapmalıyım” baskısı başlatmayı zorlaştırır.</li>
-        <li><strong>Korku:</strong> Başarısız olma ya da eleştirilme korkusu.</li>
-        <li><strong>Motivasyon eksikliği:</strong> Görev ilgimizi çekmiyorsa geciktiririz.</li>
-        <li><strong>Kararsızlık:</strong> Nereden başlayacağımızı bilemeyiz.</li>
-    </ul>
-
-    <h2>Ertelemeyi Yenmenin Yolları</h2>
+ <h2>Ertelemeyi Yenmenin Yolları</h2>
     <ul>
         <li><strong>5 Dakika Kuralı:</strong> Başlamak zor geliyorsa “Sadece 5 dakika yapacağım” de. Genelde başladıktan sonra devamı gelir.</li>
         <li><strong>Görevleri Parçala:</strong> Büyük işler göz korkutur. Küçük adımlara böl, daha yapılabilir görünür.</li>
@@ -407,7 +269,7 @@
 <div class="blog-post" data-category="gelisim">
   <h2>Sabah Rutinleri ile Güne Güçlü Başla</h2>
   <p>Sabahları erken kalkmak, meditasyon yapmak ve egzersizle başlamak zihinsel ve fiziksel enerjinizi artırır.</p>
-</div>
+</div>      
 
 <script>
   function filterPosts(category) {
@@ -420,6 +282,11 @@
       }
     });
   }
-</script>
+<footer id="iletisim">
+    <p>Bana ulaşın:</p>
+    <a href="https://github.com/mehditavakoli" target="_blank">GitHub</a> |
+    <a href="https://www.linkedin.com/in/mehditavakoli" target="_blank">LinkedIn</a>
+    <p>&copy; 2025 Mehdi Tavakoli</p>
+  </footer>
 </body>
 </html>
